@@ -10,8 +10,8 @@ document.getElementById('generateBtn').addEventListener('click', function() {
 
       // Configurar el QR Code Styling con alta resolución
       var qrCode = new QRCodeStyling({
-          width: 2000,
-          height: 2000,
+          width: 6000,
+          height: 6000,
           data: link,
           image: '', // Ruta a un logo de prueba
           imageOptions: {
@@ -31,14 +31,14 @@ document.getElementById('generateBtn').addEventListener('click', function() {
               type: "dot" // Opciones: square, dot
           },
           backgroundOptions: {
-              color: "#ffffff",
+              color: "",
           }
       });
 
       qrCode.append(qrcodeContainer);
 
       // Configurar el enlace para descargar la imagen del código QR
-      qrCode.getRawData('png').then(blob => {
+      qrCode.getRawData('png', 300).then(blob => {
           const url = URL.createObjectURL(blob);
           var downloadLink = document.getElementById('downloadLink');
           downloadLink.href = url;
