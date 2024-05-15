@@ -1,0 +1,85 @@
+/* Variables de tema */
+:root {
+  --primary-color: #0093E9;
+  --secondary-color: #80D0C7;
+  --background-gradient: linear-gradient(160deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  --input-bg-color: rgb(172, 212, 250);
+  --input-width: 40%;
+  --input-height: 30px;
+  --button-width: 30%;
+  --button-height: 30px;
+  --button-hover-color: var(--primary-color);
+  --button-hover-text-color: #fff;
+  --box-shadow: 0px 3px 3px #b7b7b7;
+  --border-radius: 8px;
+  --section-bg-color: #fff;
+  --section-padding: 20px;
+  --section-border-radius: 16px;
+}
+
+/* Reseteo de margen y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  height: 100vh;
+  background-image: var(--background-gradient);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--section-bg-color);
+  padding: var(--section-padding);
+  border-radius: var(--section-border-radius);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+input {
+  border: none;
+  background-color: var(--input-bg-color);
+  width: var(--input-width);
+  height: var(--input-height);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+button {
+  border: none;
+  width: var(--button-width);
+  height: var(--button-height);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--button-hover-color);
+  color: var(--button-hover-text-color);
+  transition: background-color 0.2s, color 0.2s;
+  outline: none;
+}
+
+footer {
+  color: var(--button-hover-text-color);
+  margin-top: 20px;
+  font-weight: 800;
+}
